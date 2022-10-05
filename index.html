@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images\Fav-icon.png">
+    <title>Portfolio</title>
+</head>
+<body>
+     <div id="header">
+        <div class="container">
+            <nav>
+                <img class="logo" src="images\logo.png" alt="logo">
+                <ul id="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa fa-close" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa fa-binoculars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hey folks!<br> I'm <span id="name">Tarun Lalwani</span></h1>
+                <h4><span>I am</span><br>
+                    <div class="messag">
+                        <div class="word1">Writer</div>
+                        <div class="word2">Designer</div>
+                        <div class="word3">Web Developer </div>
+                      </div>
+                </h4>
+                
+            </div>
+        </div>
+     </div>
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img id="about-img" src="images\About-2.jpg" alt="">
+                </div>
+                <div class="col-2"><h1>About Me</h1>
+                    <p>Tarun Lalwani is an Indian Web Developer <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id non ratione laborum ut, architecto eum nesciunt explicabo beatae sit illo molestiae sed quod adipisci iste neque ab? Et, incidunt facere.</p>
+                    <div class="titles">
+                    <p class="links active" onclick="opentab('skills')">Skills</p>
+                    <p class="links" onclick="opentab('education')">Education</p>
+                    <p class="links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <img src="images\Skills.png" alt="Skills">
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>Highschool<br><a href="https://dpsazaadnagar.com/" target="_blank" class="social"> <i class="fa solid fa-building"></i></a>Delhi Public School</li>
+                            <li>Intermediate <br><a href="https://dpsazaadnagar.com/" target="_blank" class="social"><i class="fa solid fa-building"></i></a>Delhi Public School</li>
+                            <li>B.Tech <br><a href="https://www.akgec.ac.in/" target="_blank" class="social"><i class="fa solid fa-university"></i></a>Ajay Kumar Garg Engineering College</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>fd</li>
+                            <li>nufnjd knfkmgrtg</li>
+                            <li>asjfsvjnjvnknen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div> 
+     <div class="form-container" id="contact">
+        <div class="message">
+            <h1>Contact Me</h1>
+            <p>You can fill out this form to share the 
+                details with me and I will reach out to you.
+            </p>
+            <table>
+                <tr>
+                    <td class="social"><i class="fa regular fa-envelope"></i></td>
+                    <td>power@example.com</td>
+                </tr>
+                <tr>
+                    <td class="social"><i class="fa regular fa-phone"></i></td>
+                    <td>9012345678</td>
+                </tr>
+            </table>
+            <br>
+            <h3 id="con-soc">Social</h3>
+            <table>
+                <tr class="social">
+                    <td><a href="https://www.instagram.com/tarunlalwani2002/" target="_blank"><i class="fa brands fa-instagram"></i></a></td>
+                    <td><a href="https://www.facebook.com/" target="_blank"><i class="fa brands fa-facebook" target="_blank"></i></a></td>
+                    <td><a href="https://www.linkedin.com/in/tarun-lalwani-8b8783232/" target="_blank"><i class="fa brands fa-linkedin"></i></a></td>
+                    <td><a href="https://github.com/tarunl2002" target="_blank"><i class="fa brands fa-github"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="act-form">        
+            <form name="submit-to-google-sheet" class="contact">
+            <p>Get In Touch</p>
+            <input type="text" placeholder="Name" name="Name"><br>
+            <input type="email" placeholder="Email" name="Email"><br>
+            <input type="tel" placeholder="Phone Number" name="PhoneNo"><br>
+            <label>Date of Birth</label><input type="date" id="date" name="DateofBirth"><br>
+            <input type="checkbox" id="check"><label for="updates">Give Me Updates</label><br>
+            <input type="submit" value="Submit" class="reg-btn">
+          </form>
+        </div>
+     </div>
+     <footer>
+        <p>©2022 Tarun</p>
+     </footer>
+
+
+<script>
+    var tablinks=document.getElementsByClassName("links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwB07oVi93JCj9njyXBSpjrLx9z0mBdfXLaKFfablLuL3uNpFxld_2bQXbID7zWdHA2/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script>
+    var menu=document.getElementById("menu")
+    function openmenu(){
+        menu.style.right = "0";
+    }
+    function closemenu(){
+        menu.style.right = "-200px";
+    }
+  </script>
+</body>
+</html>
