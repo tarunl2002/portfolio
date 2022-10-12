@@ -10,9 +10,10 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/download.png);
-    background-size: cover;
-    background-position: center;
+    background-image: url(images/background.png);
+    background-size: 1400px 1400px;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 .container{
     padding: 10px 10%;
@@ -144,7 +145,7 @@ form {
     transition: all 0.2s ease-in-out;
 } 
 .contact{
-    background: linear-gradient(45deg, #B01C33, #2A363B);
+    background: #F05454;
     height: 80vh;
     font-family: 'Montserrat', sans-serif;
     width: 100vh;
@@ -337,7 +338,6 @@ h4 {
 
 /*----------------css for small screen-----------*/
 
-
 .fa.fa-binoculars{
     display: none;
 }
@@ -347,7 +347,10 @@ h4 {
 
 @media only screen and (max-width: 900px){
     #header{
-    background-image: url(images/download-mobile.png);
+    background-image: url(images/background.png);
+    background-position: right;
+    margin: 0;
+    background-size: 800px 800px;
     }
     .header-text{
         margin-top: 30%;
